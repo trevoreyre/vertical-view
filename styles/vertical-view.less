@@ -10,13 +10,13 @@
 
 .sqs-video-background {
   background-color: @tweak-branding-primary-color;
+  transition: background-color 0.3s ease;
 }
 
 .sqs-video-background .background-video.ready {
   mix-blend-mode: multiply;
-  transition: mix-blend-mode 0.3s ease;
 }
 
-.sqs-video-background.active .background-video.ready {
-  mix-blend-mode: normal;
+.sqs-video-background.active {
+  background-color: #fff;
 }
