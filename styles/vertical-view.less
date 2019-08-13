@@ -7,3 +7,11 @@
 
 // tweak: { "category": "Branding", "label" : "Accent Color", "title" : "tweak-branding-secondary-color", "type" : "color", "target" : ".sqs-video-background" }
 @tweak-branding-secondary-color: #111111;
+
+.sqs-video-background {
+  background-color: @tweak-branding-primary-color;
+}
+
+.sqs-video-background .background-video.ready {
+  mix-blend-mode: multiply;
+}

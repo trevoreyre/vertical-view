@@ -23,6 +23,7 @@ import Parallax from './controllers/Parallax';
 import ScrollIndicator from './controllers/ScrollIndicator';
 import SiteLoader from './controllers/SiteLoader';
 import UserAccountLink from './controllers/UserAccountLink';
+import './verticalView';
 
 controller.register('AncillaryLayout', AncillaryLayout);
 controller.register('FooterBreakpoints', FooterBreakpoints);
