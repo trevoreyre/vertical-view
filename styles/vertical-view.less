@@ -8,17 +8,20 @@
 // tweak: { "category": "Branding", "label" : "Accent Color", "title" : "tweak-branding-secondary-color", "type" : "color", "target" : ".sqs-video-background" }
 @tweak-branding-secondary-color: #111111;
 
+[data-parallax-image-wrapper],
 .sqs-video-background {
   background-color: @tweak-branding-primary-color;
   transition: background-color 0.3s ease;
 }
 
+[data-parallax-image-wapper].active,
 .sqs-video-background.active {
-  background-color: #fff;
+  background-color: transparent;
 }
 
-.sqs-video-background .background-video.ready,
-.sqs-video-background img {
+[data-parallax-image-wrapper] img,
+[data-parallax-image-wrapper] iframe,
+.sqs-video-background img,
+.sqs-video-background iframe {
   mix-blend-mode: multiply;
 }
-

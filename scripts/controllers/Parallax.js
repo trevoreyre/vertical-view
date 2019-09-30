@@ -469,6 +469,7 @@ function Parallax(element) {
   init();
 
   return {
+    nodes: matrix,
     destroy
   };
 

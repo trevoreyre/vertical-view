@@ -19,11 +19,10 @@ import MobileClassname from './controllers/MobileClassname';
 import MobileOverlayFolders from './controllers/MobileOverlayFolders';
 import MobileOffset from './controllers/MobileOffset';
 import MobileOverlayToggle from './controllers/MobileOverlayToggle';
-import Parallax from './controllers/Parallax';
 import ScrollIndicator from './controllers/ScrollIndicator';
 import SiteLoader from './controllers/SiteLoader';
 import UserAccountLink from './controllers/UserAccountLink';
-import './verticalView';
+import { Parallax } from './verticalView'
 
 controller.register('AncillaryLayout', AncillaryLayout);
 controller.register('FooterBreakpoints', FooterBreakpoints);
