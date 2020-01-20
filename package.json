@@ -11,12 +11,13 @@
   "scripts": {
     "build": "squarespace assemble && webpack",
     "clean": "squarespace clean",
-    "deploy": "squarespace setup && squarespace deploy",
+    "predeploy": "npm run build",
+    "deploy": "squarespace setup && squarespace deploy --force",
     "lint": "eslint scripts",
     "start": "squarespace setup && (npm run watch & npm run server)",
     "server": "squarespace runserver --auth --host=0.0.0.0",
     "server:auth": "npm run server -- --run-authenticated",
-    "watch": "squarespace assemble --watch & webpack --watch"
+    "watch": "squarespace assemble -wT & webpack --watch"
   },
   "dependencies": {
     "@squarespace/ancillary": "1.0.2",
