@@ -45,6 +45,10 @@ li > *::before {
   display: none !important;
 }
 
+.image-block.float .image-block-outer-wrapper {
+  box-shadow: none !important;
+}
+
 .sqs-col-6 > * > * > .image-block-outer-wrapper,
 .sqs-col-7 > * > * > .image-block-outer-wrapper,
 .sqs-col-8 > * > * > .image-block-outer-wrapper,
@@ -90,15 +94,17 @@ li > *::before {
 
 .pricing {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .pricing-card {
+  flex: 1 1 ~'calc(25% - 24px)';
   border-radius: 8px;
   margin: 0 12px 24px;
-  width: 100%;
-  max-width: 344px;
+  max-width: 480px;
   box-sizing: border-box;
   background: @tweak-main-background-color;
   color: @tweak-body-text-color;
@@ -106,6 +112,12 @@ li > *::before {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
+  @media screen and (max-width: 1328px) {
+    flex: 1 1 ~'calc(50% - 24px)';
+  }
+  @media screen and (max-width: 640px) {
+    flex: 1 1 ~'calc(100% - 24px)';
+  }
 }
 
 .pricing-card h2 {
@@ -115,6 +127,9 @@ li > *::before {
   color: @tweak-overlay-body-text-color;
   text-transform: uppercase;
   letter-spacing: 0.05px;
+  @media screen and (max-width: 640px) {
+    padding: 8px 12px;
+  }
 }
 
 .pricing-card h2:first-of-type {
@@ -130,37 +145,63 @@ li > *::before {
   color: @tweak-h2-color;
 }
 
-// .pricing-card h2:not(:first-of-type) strong {
-//   font-size
-// }
+.pricing-card .price {
+  padding: 24px;
+  border-bottom: 1px solid @tweak-line-color;
+  @media screen and (max-width: 640px) {
+    padding: 12px;
+  }
+}
 
 .pricing-card h3 {
-  border-bottom: 1px solid @tweak-line-color;
   margin: 0;
-  padding: 24px;
   .tweak-h2-font;
   font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
   color: @tweak-h2-color;
+  &::first-letter {
+    font-size: 32px;
+    font-weight: 600;
+    vertical-align: super;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 56px;
+  }
 }
 
 .pricing-card h3 span {
   .tweak-body-font;
   color: @tweak-body-text-color;
+  font-weight: 600;
+}
+
+.pricing-card h3 + h3 {
+  margin-top: 12px;
+  font-size: 32px;
+  &::first-letter {
+    font-size: 16px;
+  }
 }
 
 .pricing-card h4 {
-  border-bottom: 1px solid @tweak-line-color;
   margin: 0;
-  padding: 24px;
   .tweak-body-font;
   color: @tweak-h2-color;
 }
 
 .pricing-card ul {
-  padding: 0 24px;
+  margin: 0;
+  padding: 24px;
+  @media screen and (max-width: 640px) {
+    padding: 12px 24px;
+  }
 }
 
 .pricing-card li {
   padding: 0;
   background: none;
+  @media screen and (max-width: 640px) {
+    margin-bottom: 1.25rem;
+  }
 }
