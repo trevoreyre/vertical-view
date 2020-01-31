@@ -205,3 +205,37 @@ li > *::before {
     margin-bottom: 1.25rem;
   }
 }
+
+/* FAQ Accordions */
+#frequently-asked-questions h3 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#frequently-asked-questions h3::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(https://static1.squarespace.com/static/5c625352d74562c2e6033f1b/t/5d958d6ea1b7f822beb1f0cb/1570082158336/chevron.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  transition: transform 300ms ease;
+}
+
+#frequently-asked-questions h3.active::before {
+  transform: rotate(180deg);
+}
+
+#frequently-asked-questions h3 + p {
+  padding-left: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+}
+
+#frequently-asked-questions h3.active + p {
+  max-height: 999px;
+}

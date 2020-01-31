@@ -22,7 +22,7 @@ import MobileOverlayToggle from './controllers/MobileOverlayToggle';
 import ScrollIndicator from './controllers/ScrollIndicator';
 import SiteLoader from './controllers/SiteLoader';
 import UserAccountLink from './controllers/UserAccountLink';
-import { Parallax } from './verticalView'
+import { Parallax, FAQAccordion } from './verticalView';
 
 controller.register('AncillaryLayout', AncillaryLayout);
 controller.register('FooterBreakpoints', FooterBreakpoints);
@@ -47,3 +47,4 @@ controller.register('VideoBackground', (element) => {
     Tweak.watch('tweak-overlay-parallax-enabled', handleTweak);
   });
 });
+FAQAccordion();
